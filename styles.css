@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -50,7 +50,7 @@ main {
 
 /* Links inside main */
 main a {
-    color: #0073e6;
+    color: blue;
     text-decoration: none;
 }
 
@@ -111,5 +111,4 @@ footer section p {
         margin-top: 15px;
     }
 }
-
 
