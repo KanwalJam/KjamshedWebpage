@@ -1,83 +1,114 @@
+/* General Styles */
 body {
-    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
+/* Navigation Bar */
 nav ul {
     list-style-type: none;
-    padding: 10%;
+    padding: 0;
     display: flex;
     justify-content: center;
     background-color: #333;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    padding: 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-weight: bold;
     padding: 10px;
-    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
 }
 
 header h2 {
-    text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.card-container {
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Links inside main */
+main a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Cards Section */
+section:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
-.card {
+section:nth-of-type(2) div {
     background-color: white;
     padding: 20px;
-    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
     background-color: #333;
     color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-footer ul {
+footer aside ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
 }
 
-footer ul li {
-    margin-left: 15px;
+footer section p {
+    margin: 0;
 }
 
-footer ul li a {
-    color: white;
-    text-decoration: none;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .card-container {
+    /* Stack cards in one column */
+    section:nth-of-type(2) {
         grid-template-columns: 1fr;
     }
+    
+    /* Make footer a column layout */
     footer {
         flex-direction: column;
         text-align: center;
     }
-    footer ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    footer ul li {
-        margin: 5px 0;
+    
+    footer aside ul {
+        margin-top: 15px;
     }
 }
 
